@@ -4,15 +4,31 @@ import java.net.URI;
 
 public class UserCreatedResponse {
 
+    private Integer userId;
     private String message;
-    private URI path;
+//    private URI path;
 
     public UserCreatedResponse() {
     }
 
-    public UserCreatedResponse(String message, URI path) {
+//    public UserCreatedResponse(Integer userId, String message, URI path) {
+//        this.userId = userId;
+//        this.message = message;
+//        this.path = path;
+//    }
+
+
+    public UserCreatedResponse(Integer userId, String message) {
+        this.userId = userId;
         this.message = message;
-        this.path = path;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
     }
 
     public String getMessage() {
@@ -23,11 +39,11 @@ public class UserCreatedResponse {
         this.message = message;
     }
 
-    public URI getPath() {
-        return path;
-    }
-
-    public void setPath(URI path) {
-        this.path = path;
-    }
+//    public URI getPath() {
+//        return path;
+//    }
+//
+//    public void setPath(URI path) {
+//        this.path = path;
+//    }
 }
